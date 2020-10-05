@@ -26,3 +26,5 @@ export function sendTelemetryData(telemetryCommand: string, commandOption: strin
 		: { command_option: commandOption, repo_name: '' };
 	reporter.sendTelemetryEvent(telemetryCommand, telemetryProperties);
 }
+
+// test
