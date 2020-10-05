@@ -20,6 +20,7 @@ interface PackageInfo {
 	name: string;
 	version: string;
 	aiKey: string;
+	// this is a test
 }
 
 function readJson(path: string) {
