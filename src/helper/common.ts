@@ -25,7 +25,7 @@ export function sendTelemetryData(telemetryCommand: string, commandOption: strin
 		? { command_option: commandOption, repo_name: activeRepo }
 		: { command_option: commandOption, repo_name: '' };
 
-	var config = workspace.getConfiguration('docsYaml');
+	const config = workspace.getConfiguration('docsYaml');
 	const enableTelemetry = config.get<boolean>('telemetry.enableTelemetry');
 
 	if (enableTelemetry) {
