@@ -24,5 +24,11 @@ export function sendTelemetryData(telemetryCommand: string, commandOption: strin
 	const telemetryProperties = activeRepo
 		? { command_option: commandOption, repo_name: activeRepo }
 		: { command_option: commandOption, repo_name: '' };
-	reporter.sendTelemetryEvent(telemetryCommand, telemetryProperties);
+
+	var config = workspace.getConfiguration('docsYaml');
+	const enableTelemetry = config.get<boolean>('telemetry.enableTelemetry');
+
+	if (enableTelemetry) {
+		reporter.sendTelemetryEvent(telemetryCommand, telemetryProperties);
+	}
 }
