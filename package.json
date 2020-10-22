@@ -33,7 +33,18 @@
 		"onLanguage:yaml"
 	],
 	"main": "./dist/extension",
-	"contributes": {},
+	"contributes": {
+		"configuration": {
+			"title": "Docs Yaml",
+			"properties": {
+				"docsYaml.telemetry.enableTelemetry": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable usage data and errors to be sent to an online service."
+				}
+			}
+		}
+	},
 	"extensionDependencies": [
 		"redhat.vscode-yaml"
 	],
