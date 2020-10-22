@@ -1,5 +1,9 @@
 # Change Log
 
+## **0.2.6**
+
+- Move docs-yaml to standalone repository to include as submodule.
+
 ## **0.2.4**
 
 - Bug fix for fuzzy search with templates
@@ -56,6 +60,7 @@
 - Support TOC schema validation
 
 > remaining work:
+>
 > 1. ~~update the `toc.schema.json` file.~~
 > 2. resolve toc filename case-insensitive issue([yaml-language-server issue](https://github.com/redhat-developer/yaml-language-server/pull/79)).
 
