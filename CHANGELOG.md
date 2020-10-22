@@ -3,6 +3,7 @@
 ## **0.2.6**
 
 - Move docs-yaml to standalone repository to include as submodule.
+- Add configuration settings to disable telemetry collection.
 
 ## **0.2.4**
 
