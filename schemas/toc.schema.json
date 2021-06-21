@@ -84,7 +84,7 @@
 					"minItems": 1
 				}
 			},
-			"type": "object",
+			"type": ["object", "string", "array"],
 			"required": ["name"],
 			"additionalProperties": true
 		},
@@ -93,7 +93,7 @@
 				"metadata": {
 					"description": "The metadata of the TOC.",
 					"properties": {},
-					"type": "object"
+					"type": ["object", "string", "array"]
 				},
 				"items": {
 					"description": "The tree which represents the hierarchy of the TOC.",
@@ -104,7 +104,7 @@
 					"minItems": 1
 				}
 			},
-			"type": "object",
+			"type": ["object", "string", "array"],
 			"required": ["items"],
 			"additionalProperties": false,
 			"metadata": "/metadata"
