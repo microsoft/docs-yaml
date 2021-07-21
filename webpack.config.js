@@ -5,12 +5,12 @@
 const webpack = require('webpack');
 
 const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 /**@type {import('webpack').Configuration}*/
-module.exports = {
+const config = {
 	target: 'node', // vscode extensions run in a Node.js-context 📖 -> https://webpack.js.org/configuration/node/
 	context: __dirname,
 	entry: './src/extension.ts', // the entry point of this extension, 📖 -> https://webpack.js.org/configuration/entry-context/
@@ -54,9 +54,8 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CopyPlugin({
-			patterns: [{ from: 'schemas' }, { from: 'snippets' }]
-		})
+		new CopyWebpackPlugin([{ from: 'schemas' }, { from: 'snippets' }])
 		// new BundleAnalyzerPlugin()
 	]
 };
+module.exports = config;
